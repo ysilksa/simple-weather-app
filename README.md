@@ -1,4 +1,14 @@
 
+# Project Description
+Created with React and WeatherStack API.
+
+[Figma](https://www.figma.com/design/jVpZWUBm7R3DeOZT45dkK0/weather-app?node-id=0-1&t=LHnqLLArwTy4AoJy-1)
+
+All pixel art created by me. 
+
+## Progress
+- 25/3/22: Finished Figma draft. 
+
 
 # Getting Started with Create React App
 
