@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'InstrumentSans-Regular';
+    src: url('fonts/InstrumentSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'InstrumentSans-SemiBold';
+    src: url('fonts/InstrumentSans-SemiBold.ttf') format('truetype');
+}
