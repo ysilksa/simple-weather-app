@@ -1,0 +1,12 @@
+.whole-page {
+    background-color: #E1EBFF;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* flex box to store a line of cities */
+.horizontal-flex {
+    display: flex; 
+    padding: 5vw;
+    gap: 5vw; 
+}

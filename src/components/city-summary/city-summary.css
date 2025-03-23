@@ -1,0 +1,71 @@
+/* flexbox that contains the top and bottom half */
+.summary-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* top half and bottom half of each summary */
+
+.top-half {
+    background-color: #FFFADD;
+    height: 20vh;
+    width: 15vw; 
+    border-radius: 4px 4px 0px 0px;
+}
+
+.bottom-half {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    height: 28vh;
+    width: 15vw;
+    gap: 1em;
+    border-radius: 0px 0px 4px 4px;
+}
+
+/* individual top-half css */
+.place-name {
+    font-family: 'InstrumentSans-SemiBold';
+    font-size: 20px;
+    padding: 1em;
+    height: 20%;
+    /* background-color: antiquewhite; */
+}
+
+.image-info-box {
+    display: flex;  
+    height: 4.7em;
+    padding-left: 1.3em;
+    /* background-color: blue; */
+    font-family: 'InstrumentSans-Regular';
+    gap: 1vw;
+}
+
+.image-holder {
+    background-color: aqua;
+    height: 75px;
+    width: 75px; 
+}
+
+.temperature-box {
+    display: flex;
+    flex-direction: column;
+}
+.curr-temperature-box {
+    font-size: 30px;
+}
+
+.high-low-temperature-box {
+    font-size: 15px; 
+}
+
+/* bottom-half css */
+.forecast-box {
+    width: 13em;
+    height: 3em;
+    background-color: #E1EBFF;
+    border-radius: 4px;
+}

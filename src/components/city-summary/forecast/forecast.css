@@ -1,0 +1,26 @@
+/* outer box */
+.forecast-box {
+    display: flex; 
+    width: 15em;
+    height: 3em;
+    background-color: #E1EBFF;
+    border-radius: 4px;
+    font-family: 'InstrumentSans-Regular';
+    font-size: 15px; 
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+/* container for image */
+.forecast-img {
+    width: 2em;
+    height: 2em;
+    background-color: aqua;
+}
+
+/* flex box for the high and low temperatures */
+.inner-flex {
+    display: flex; 
+    flex-direction: column;
+}
