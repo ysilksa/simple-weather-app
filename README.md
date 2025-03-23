@@ -7,6 +7,7 @@ Created with React and WeatherStack API.
 All pixel art created by me. 
 
 ## Progress
+- 25/3/23: Finished UI components of City Summary and the forecasting on the city summary card. 
 - 25/3/22: Finished Figma draft. 
 
 
