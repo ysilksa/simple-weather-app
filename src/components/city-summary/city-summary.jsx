@@ -2,11 +2,12 @@
 // more detailed information on the city's weather. 
 
 import React from 'react';
-import PropTypes from 'prop-types';
+//import PropTypes from 'prop-types';
 import './city-summary.css'
 import '../../styles/fonts.css'
 import { ForecastSummary } from './forecast/forecast';
-import { CustomButton } from '../button';
+import { CustomButton } from '../button/button';
+
 
 const CitySummary = ({
     cityName, 
@@ -14,14 +15,16 @@ const CitySummary = ({
     countryName,
     currTemperature, 
     highTemperature, 
-    lowTemperature
+    lowTemperature, 
+    currentData, 
+    forecastData
 
 }) => {
     return(
         <div className='summary-container'>
             {/* top half of the city summary */}
             <div className='top-half'>
-                <div className='place-name'>{cityName}, {stateName}, {countryName}</div>
+                <div clas   sName='place-name'>{cityName}, {stateName}, {countryName}</div>
                 <div className='image-info-box'>
                     <div className='image-holder'></div>
                     <div className='temperature-box'>
@@ -64,13 +67,13 @@ const CitySummary = ({
 
 
 // prop validation for CitySummary
-CitySummary.propTypes = {
-    cityName: PropTypes.string.isRequired,
-    stateName: PropTypes.string.isRequired,
-    countryName: PropTypes.string.isRequired,
-    currTemperature: PropTypes.number.isRequired,
-    highTemperature: PropTypes.number.isRequired, 
-    lowTemperature: PropTypes.number.isRequired
-}
+// CitySummary.propTypes = {
+//     cityName: PropTypes.string.isRequired,
+//     stateName: PropTypes.string.isRequired,
+//     countryName: PropTypes.string.isRequired,
+//     currTemperature: PropTypes.number.isRequired,
+//     highTemperature: PropTypes.number.isRequired, 
+//     lowTemperature: PropTypes.number.isRequired
+// }
 
 export { CitySummary };

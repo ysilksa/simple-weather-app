@@ -2,7 +2,7 @@ const apiKey = process.env.REACT_APP_WEATHERSTACK_API_KEY;
 
 async function getCurrWeather(cityName) {
     try {
-        const response = await fetch(`https://api.weatherstack.com/current?access_key=${apiKey}&query=${cityName}`);
+        const response = await fetch(`https://api.weatherstack.com/forecast?access_key=${apiKey}&query=${cityName}&forecast_days=1`);
 
             const data = await response.json();
 

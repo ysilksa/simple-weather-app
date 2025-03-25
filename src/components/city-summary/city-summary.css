@@ -9,7 +9,7 @@
 
 .top-half {
     background-color: #FFFADD;
-    height: 20vh;
+    height: 25vh;
     width: 15vw; 
     border-radius: 4px 4px 0px 0px;
 }
@@ -31,7 +31,7 @@
     font-family: 'InstrumentSans-SemiBold';
     font-size: 20px;
     padding: 1em;
-    height: 20%;
+    height: 35%;
     /* background-color: antiquewhite; */
 }
 

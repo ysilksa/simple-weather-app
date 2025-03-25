@@ -8,7 +8,7 @@ const CustomButton = ({
     buttonText
 }) => {
     return (
-        <button className='custom-button'>
+        <button className='custom-button' width={buttonWidth} height={buttonHeight}>
             {buttonText}
         </button>
     );
