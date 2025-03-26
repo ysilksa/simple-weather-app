@@ -6,7 +6,8 @@ import PropTypes from 'prop-types';
 import './city-summary.css'
 import '../../styles/fonts.css'
 import { ForecastSummary } from './forecast/forecast';
-import { CustomButton } from '../button';
+import { CustomButton } from '../button/button';
+
 
 const CitySummary = ({
     cityName, 
@@ -14,9 +15,14 @@ const CitySummary = ({
     countryName,
     currTemperature, 
     highTemperature, 
-    lowTemperature
+    lowTemperature, 
 
 }) => {
+
+    // get today's date in the format YYYY-MM-DD
+    const today = new Date();
+    const todayDate = today.toLocaleDateString('en-US', { month: 'long', day: 'numeric' });  // "YYYY-MM-DD"
+
     return(
         <div className='summary-container'>
             {/* top half of the city summary */}
@@ -34,11 +40,13 @@ const CitySummary = ({
                 </div>
             </div>
 
+
+
             {/* bottom half of the city summary */}
             <div className='bottom-half'>
                 {/* forecast summaries */}
                 <ForecastSummary
-                date='March 20'
+                date={todayDate}
                 weatherDescriptor={'sunny'}
                 highTemperature={60}
                 lowTemperature={37}/>
@@ -63,7 +71,7 @@ const CitySummary = ({
 }
 
 
-// prop validation for CitySummary
+//prop validation for CitySummary
 CitySummary.propTypes = {
     cityName: PropTypes.string.isRequired,
     stateName: PropTypes.string.isRequired,
