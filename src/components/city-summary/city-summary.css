@@ -3,6 +3,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 /* top half and bottom half of each summary */
@@ -12,6 +13,7 @@
     height: 25vh;
     width: 15vw; 
     border-radius: 4px 4px 0px 0px;
+    font-family: 'InstrumentSans-SemiBold';
 }
 
 .bottom-half {
@@ -30,7 +32,7 @@
 .place-name {
     font-family: 'InstrumentSans-SemiBold';
     font-size: 20px;
-    padding: 1em;
+    padding: 0.5em 1em;
     height: 35%;
     /* background-color: antiquewhite; */
 }

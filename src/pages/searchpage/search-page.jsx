@@ -5,7 +5,6 @@ import { getCurrWeather } from '../../services/current-weather-data';
 import LoadingScreen from  '../loading-screen.jsx';
 
 
-
 export default function SearchPage() {
 
     const [locData, setLocData] = useState(null);
@@ -14,18 +13,14 @@ export default function SearchPage() {
         getCurrWeather('New York').then((data) => {
             setLocData(data);
         }).catch((error) => {
-            console.error('Error fetching weather data:', error);
+            console.error('Error fetching weather data: ', error);
         });
-
     }, []);
+
 
     if (!locData) {
         return <LoadingScreen/>;
     }
-    
-    // Get today's date in the format YYYY-MM-DD
-    //const today = new Date();
-    //const todayDate = today.toISOString().split('T')[0];  // "YYYY-MM-DD"
    
     return (
         <div className='whole-page'>
@@ -35,12 +30,17 @@ export default function SearchPage() {
                 stateName={locData.location.region}
                 countryName={locData.location.country}
                 currTemperature={locData.current.temperature}
-                highTemperature={20}
-                lowTemperature={20} 
+                highTemperature={locData.current.temperature + 5}
+                lowTemperature={locData.current.temperature - 5} 
                 />
 
                 <CitySummary
                 cityName='Chicago'
+                stateName='Illinois'
+                countryName='United States'
+                currTemperature={60}
+                highTemperature={65}
+                lowTemperature={55} 
                 />
             </div>
             

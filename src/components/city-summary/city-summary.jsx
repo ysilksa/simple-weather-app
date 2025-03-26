@@ -2,7 +2,7 @@
 // more detailed information on the city's weather. 
 
 import React from 'react';
-//import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import './city-summary.css'
 import '../../styles/fonts.css'
 import { ForecastSummary } from './forecast/forecast';
@@ -16,15 +16,18 @@ const CitySummary = ({
     currTemperature, 
     highTemperature, 
     lowTemperature, 
-    currentData, 
-    forecastData
 
 }) => {
+
+    // get today's date in the format YYYY-MM-DD
+    const today = new Date();
+    const todayDate = today.toLocaleDateString('en-US', { month: 'long', day: 'numeric' });  // "YYYY-MM-DD"
+
     return(
         <div className='summary-container'>
             {/* top half of the city summary */}
             <div className='top-half'>
-                <div clas   sName='place-name'>{cityName}, {stateName}, {countryName}</div>
+                <div className='place-name'>{cityName}, {stateName}, {countryName}</div>
                 <div className='image-info-box'>
                     <div className='image-holder'></div>
                     <div className='temperature-box'>
@@ -37,11 +40,13 @@ const CitySummary = ({
                 </div>
             </div>
 
+
+
             {/* bottom half of the city summary */}
             <div className='bottom-half'>
                 {/* forecast summaries */}
                 <ForecastSummary
-                date='March 20'
+                date={todayDate}
                 weatherDescriptor={'sunny'}
                 highTemperature={60}
                 lowTemperature={37}/>
@@ -66,14 +71,14 @@ const CitySummary = ({
 }
 
 
-// prop validation for CitySummary
-// CitySummary.propTypes = {
-//     cityName: PropTypes.string.isRequired,
-//     stateName: PropTypes.string.isRequired,
-//     countryName: PropTypes.string.isRequired,
-//     currTemperature: PropTypes.number.isRequired,
-//     highTemperature: PropTypes.number.isRequired, 
-//     lowTemperature: PropTypes.number.isRequired
-// }
+//prop validation for CitySummary
+CitySummary.propTypes = {
+    cityName: PropTypes.string.isRequired,
+    stateName: PropTypes.string.isRequired,
+    countryName: PropTypes.string.isRequired,
+    currTemperature: PropTypes.number.isRequired,
+    highTemperature: PropTypes.number.isRequired, 
+    lowTemperature: PropTypes.number.isRequired
+}
 
 export { CitySummary };
